@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holistic Medical Supply - Complete DMEPOS Catalog</title>
+    <style>
+        @page { size: letter; margin: 0.5in; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: Arial, sans-serif; 
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e5a96 0%, #2a6fb8 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .logo-container img {
+            max-width: 150px;
+            height: auto;
+        }
+        
+        .company-name { 
+            font-size: 42px; 
+            font-weight: bold; 
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .tagline { 
+            font-size: 18px; 
+            font-style: italic;
+            opacity: 0.9;
+        }
+        
+        .boc-bar {
+            background: #e8f4f8;
+            border: 3px solid #1e5a96;
+            padding: 20px;
+            margin: 30px;
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .boc-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #2a6fb8;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .boc-label { 
+            font-size: 11px; 
+            font-weight: bold; 
+            color: #1e5a96; 
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        
+        .boc-value { 
+            font-size: 16px; 
+            font-weight: bold; 
+            color: #2c3e50;
+        }
+        
+        .intro {
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .intro h2 {
+            font-size: 32px;
+            color: #1e5a96;
+            margin-bottom: 20px;
+        }
+        
+        .intro p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            padding: 40px;
+        }
+        
+        .catalog-card {
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .catalog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(30, 90, 150, 0.2);
+            border-color: #2a6fb8;
+        }
+        
+        .catalog-card h3 {
+            font-size: 24px;
+            color: #1e5a96;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #2a6fb8;
+            padding-bottom: 10px;
+        }
+        
+        .catalog-card ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .catalog-card li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+            font-size: 15px;
+        }
+        
+        .catalog-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #2a6fb8;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .catalog-card a {
+            display: inline-block;
+            background: linear-gradient(135deg, #1e5a96 0%, #2a6fb8 100%);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .catalog-card a:hover {
+            background: linear-gradient(135deg, #2a6fb8 0%, #1e5a96 100%);
+            transform: scale(1.05);
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            border-top: 3px solid #2a6fb8;
+            padding: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .footer strong {
+            color: #1e5a96;
+        }
+        
+        @media print {
+            body { background: white; padding: 0; }
+            .catalog-card:hover { transform: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-container">
+                <div>
+                    <div class="company-name">Holistic Medical Supply</div>
+                    <div class="tagline">Complete DMEPOS Solutions • BOC Accredited</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="boc-bar">
+            <div class="boc-item">
+                <div class="boc-label">BOC Accreditation</div>
+                <div class="boc-value">Facility #S72641</div>
+            </div>
+            <div class="boc-item">
+                <div class="boc-label">Valid Through</div>
+                <div class="boc-value">May 31, 2028</div>
+            </div>
+            <div class="boc-item">
+                <div class="boc-label">NPI Number</div>
+                <div class="boc-value">1780490581</div>
+            </div>
+            <div class="boc-item">
+                <div class="boc-label">BOC Categories</div>
+                <div class="boc-value">36 Categories Approved</div>
+            </div>
+        </div>
+        
+        <div class="intro">
+            <h2>Professional Product Catalog for Physicians</h2>
+            <p><strong>Complete HCPCS Code Reference with Medical Necessity Guidelines</strong></p>
+            <p>Our comprehensive catalog is organized by equipment category for easy reference. Each section includes HCPCS codes, ICD-10 diagnosis codes, clinical indications, and medical necessity requirements.</p>
+            <p><strong>Select a category below to view the complete product catalog:</strong></p>
+        </div>
+        
+        <div class="catalog-grid">
+            <div class="catalog-card">
+                <h3>🏥 Diabetic & Hospital Equipment</h3>
+                <ul>
+                    <li>DM02 - Diabetic Equipment</li>
+                    <li>DM05 - Safety/Traction Equipment</li>
+                    <li>DM06 - Hospital Beds</li>
+                    <li>DM08 - Commode Chairs</li>
+                    <li>DM11 - IPPB Machines</li>
+                    <li>DM12 - Lymphedema Pumps</li>
+                </ul>
+                <a href="catalog_diabetic_hospital.html">View Catalog →</a>
+            </div>
+            
+            <div class="catalog-card">
+                <h3>👨‍⚕️ Patient Care Equipment</h3>
+                <ul>
+                    <li>DM13 - Patient Lifts</li>
+                    <li>DM14 - Urinary Catheters</li>
+                    <li>DM15 - Infusion Pumps</li>
+                    <li>DM16 - Nebulizers & Compressors</li>
+                    <li>DM17 - Ventilators</li>
+                    <li>DM18 - Suction Pumps</li>
+                </ul>
+                <a href="catalog_patient_care.html">View Catalog →</a>
+            </div>
+            
+            <div class="catalog-card">
+                <h3>⚕️ Therapeutic Equipment</h3>
+                <ul>
+                    <li>DM20 - TENS Units</li>
+                    <li>DM21 - Traction Equipment</li>
+                    <li>DM22 - Lymphedema Therapy</li>
+                    <li>DM24 - Infusion Supplies</li>
+                    <li>DM25 - Wheelchair Accessories</li>
+                    <li>DM28 - CPAP/BiPAP Devices</li>
+                    <li>DM29 - Home Dialysis</li>
+                </ul>
+                <a href="catalog_therapeutic.html">View Catalog →</a>
+            </div>
+            
+            <div class="catalog-card">
+                <h3>♿ Mobility Equipment</h3>
+                <ul>
+                    <li>M01 - Canes</li>
+                    <li>M05 - Crutches</li>
+                    <li>M06 - Seat Lift Mechanisms</li>
+                    <li>M06A - Power Scooters</li>
+                    <li>M07 - Manual Wheelchair Accessories</li>
+                    <li>M07A - Power Wheelchair Accessories</li>
+                    <li>M10 - Power Wheelchairs</li>
+                    <li>S01 - Canes</li>
+                    <li>S04 - Walkers</li>
+                </ul>
+                <a href="catalog_mobility.html">View Catalog →</a>
+            </div>
+            
+            <div class="catalog-card">
+                <h3>🦾 Orthotic & Prosthetic</h3>
+                <ul>
+                    <li>OR03 - Urological Supplies</li>
+                    <li>OR04 - Penile Devices</li>
+                    <li>PD04 - Neurostimulators</li>
+                    <li>PD08 - Upper Extremity Prosthetics</li>
+                    <li>PD09 - Ostomy Supplies</li>
+                </ul>
+                <a href="catalog_orthotic_prosthetic.html">View Catalog →</a>
+            </div>
+            
+            <div class="catalog-card">
+                <h3>🔬 Specialized Equipment</h3>
+                <ul>
+                    <li>PE03 - Paraffin Bath Units</li>
+                    <li>PE04 - Patient Lifts</li>
+                    <li>R07 - Apnea Monitors</li>
+                </ul>
+                <a href="catalog_specialized.html">View Catalog →</a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div style="font-size: 16pt; font-weight: bold; margin-bottom: 15px; color: #1e5a96;">
+                📞 CONTACT INFORMATION
+            </div>
+            <div style="margin-bottom: 15px;">
+                <strong>Address:</strong> 1170 Port Washington Blvd, Port Washington, NY 11050<br>
+                <strong>Phone:</strong> +1 516-810-26-33 • <strong>Fax:</strong> +1 516-268-96-79<br>
+                <strong>Email:</strong> holistic766@gmail.com
+            </div>
+            <div style="font-size: 12px; color: #666; margin-top: 15px;">
+                <strong>SERVICE AREA:</strong> NYC • Brooklyn • Staten Island • Port Washington • Nassau County<br>
+                <strong>INSURANCE:</strong> Medicare & Medicaid Only • No Private Insurance<br>
+                <strong>COMPLIANCE:</strong> All HCPCS codes current 2025-2026 • ICD-10 codes FY 2026 compliant
+            </div>
+            <div style="margin-top: 20px; padding-top: 15px; border-top: 2px solid #2a6fb8; font-weight: bold; color: #1e5a96;">
+                HOLISTIC MEDICAL SUPPLY • SERVING PHYSICIANS & PATIENTS ACROSS NEW YORK
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Care Equipment - Holistic Medical Supply</title>
+    <style>
+        @page { size: letter; margin: 0.35in; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 8.5pt;
+            line-height: 1.2;
+            background: white;
+            color: #333;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #1e5a96 0%, #2a6fb8 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .company-name { font-size: 28px; font-weight: bold; margin-bottom: 5px; }
+        .tagline { font-size: 11px; font-style: italic; }
+
+        /* NAVIGATION */
+        .nav-bar {
+            background: #f0f8ff;
+            border: 2px solid #2a6fb8;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 8pt;
+        }
+        .nav-bar a {
+            color: #1e5a96;
+            text-decoration: none;
+            padding: 5px 10px;
+            margin: 0 5px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .nav-bar a:hover {
+            background: #2a6fb8;
+            color: white;
+        }
+        .nav-bar a.active {
+            background: #1e5a96;
+            color: white;
+        }
+
+        /* BOC CREDENTIALS */
+        .boc-bar {
+            background: #e8f4f8;
+            border: 2px solid #1e5a96;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            text-align: center;
+        }
+        .boc-item {
+            background: white;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #2a6fb8;
+        }
+        .boc-label { font-size: 7pt; font-weight: bold; color: #1e5a96; text-transform: uppercase; }
+        .boc-value { font-size: 11px; font-weight: bold; color: #1e5a96; margin-top: 3px; }
+
+        /* CATEGORY SECTIONS */
+        .category-section {
+            margin-bottom: 15px;
+            page-break-inside: avoid;
+        }
+        .category-header {
+            background: linear-gradient(135deg, #1e5a96 0%, #2a6fb8 100%);
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        /* PRODUCT GRID */
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        .product-card {
+            background: white;
+            border: 1.5px solid #ddd;
+            border-radius: 6px;
+            padding: 8px;
+            page-break-inside: avoid;
+        }
+        .product-name {
+            font-weight: bold;
+            font-size: 9pt;
+            margin-bottom: 5px;
+            color: #2c3e50;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 3px;
+        }
+        .code-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 5px;
+            margin-bottom: 4px;
+            font-size: 7.5pt;
+        }
+        .code-label {
+            font-weight: bold;
+            color: #555;
+        }
+        .code-value {
+            color: #1e5a96;
+            font-weight: 600;
+        }
+        .clinical-box {
+            background: #f0f8ff;
+            padding: 5px;
+            border-radius: 4px;
+            font-size: 7.5pt;
+            margin: 5px 0;
+            border-left: 2px solid #1e5a96;
+        }
+        .med-necessity {
+            background: #e8f4f8;
+            padding: 5px;
+            border-radius: 4px;
+            font-size: 7.5pt;
+            margin: 5px 0;
+            border-left: 2px solid #ffc107;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #f8f9fa;
+            border: 2px solid #2a6fb8;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 8pt;
+            line-height: 1.6;
+            page-break-inside: avoid;
+        }
+        .footer strong { color: #1e5a96; }
+
+        /* PRINT OPTIMIZATION */
+        @media print {
+            body { background: white; }
+            .nav-bar { display: none; }
+            .page-break { page-break-before: always; }
+        }
+
+        @media screen {
+            body { padding: 10px; background: #f5f5f5; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>
+            <div class="company-name">Holistic Medical Supply</div>
+            <div class="tagline">Patient Lifts, Catheters, Infusion Pumps, Nebulizers, Ventilators, Suction</div>
+        </div>
+    </div>
+
+    <div class="nav-bar">
+        <a href="index.html">🏠 Home</a>
+        <a href="catalog_diabetic_hospital.html" >🏥 Diabetic/Hospital</a>
+        <a href="catalog_patient_care.html" class="active">👨‍⚕️ Patient Care</a>
+        <a href="catalog_therapeutic.html" >⚕️ Therapeutic</a>
+        <a href="catalog_mobility.html" >♿ Mobility</a>
+        <a href="catalog_orthotic_prosthetic.html" >🦾 Orthotic/Prosthetic</a>
+        <a href="catalog_specialized.html" >🔬 Specialized</a>
+    </div>
+
+    <div class="boc-bar">
+        <div class="boc-item">
+            <div class="boc-label">BOC Accreditation</div>
+            <div class="boc-value">Facility #S72641</div>
+        </div>
+        <div class="boc-item">
+            <div class="boc-label">Valid Through</div>
+            <div class="boc-value">May 31, 2028</div>
+        </div>
+        <div class="boc-item">
+            <div class="boc-label">NPI Number</div>
+            <div class="boc-value">1780490581</div>
+        </div>
+        <div class="boc-item">
+            <div class="boc-label">Categories</div>
+            <div class="boc-value">36 BOC Categories</div>
+        </div>
+    </div>
+
+    <!-- DM13: PATIENT LIFTS -->
+    <div class="category-section">
+        <div class="category-header">
+            DM13: PATIENT LIFTS (BOC Category)
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-name">Hydraulic Patient Lift</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0630</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">M62.81, G82.20 (Paraplegia), G80.9 (Cerebral palsy), R26.2</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Cannot bear weight; caregiver cannot safely transfer patient; complete transfer dependence
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Patient weight; caregiver physical limitations; transfer dependence; unsafe without lift; home assessment
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Electric Patient Lift</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0635</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">M62.81, G82.20, G80.9</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Requires patient lift; caregiver unable to operate hydraulic lift; frequent transfers needed
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Document why hydraulic insufficient; caregiver physical limitation; transfer frequency; medical necessity
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Patient Lift Sling or Seat</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0621, E0625, E0629</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">M62.81, G82.20</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> For use with patient lift; specific patient positioning needs
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Patient lift documentation; sling type medical necessity; patient size/needs
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Sit-to-Stand Lift</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0637, E0638, E0639</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">M62.81, M25.50 (Joint pain), R26.2</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Can partially bear weight; cannot fully transfer independently; caregiver assist needed
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Partial weight-bearing ability; transfer assistance need; PT evaluation
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<!-- DM14: INTERMITTENT URINARY CATHETERS -->
+    <div class="category-section">
+        <div class="category-header">
+            DM14: INTERMITTENT URINARY CATHETERS (BOC Category)
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-name">Intermittent Urinary Catheter - Straight Tip</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">A4351, A4352</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">N31.9 (Neurogenic bladder), N39.0 (UTI), G82.20 (Paraplegia), R33.9 (Retention)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Neurogenic bladder; urinary retention; incomplete bladder emptying; recurrent UTIs from retention
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Urodynamic studies or PVR measurements; catheterization frequency; clean technique training; physician order with quantity
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Intermittent Catheter - Coudé Tip</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">A4353</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">N40.1 (BPH with LUTS), N31.9, R33.9</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Urethral stricture; enlarged prostate; difficulty with straight catheter
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Document why straight tip insufficient; urological evaluation; specific anatomical need
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Intermittent Catheter - Hydrophilic Coated</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">A4353</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">N31.9, G82.20, N39.0</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Recurrent UTIs; urethral trauma with uncoated catheters; long-term catheterization need
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Failed standard catheters; UTI history; urethral trauma documentation; medical necessity for coating
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<!-- DM15: INFUSION PUMPS - UNCLASSIFIED -->
+    <div class="category-section">
+        <div class="category-header">
+            DM15: INFUSION PUMPS - UNCLASSIFIED (BOC Category)
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-name">Stationary Infusion Pump</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0779, E0780</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">Z79.2 (Long-term immunotherapy), C00-D49 (Neoplasms), A41.9 (Sepsis)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Home IV antibiotics; chemotherapy; TPN; continuous medication infusion
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Medication requiring pump delivery; physician infusion orders; home health coordination; drug incompatible with gravity infusion
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Ambulatory Infusion Pump</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0781, E0782, E0783, E0784, E0785, E0786, E0787</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">Z79.2, C00-D49, K50.0 (Crohn's disease), K51.0 (Ulcerative colitis)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Home infusion therapy; patient mobility required; continuous subcutaneous/IV medication
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Ambulatory infusion medical necessity; medication requiring pump; patient mobility needs
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<!-- DM16: NEBULIZERS & COMPRESSORS -->
+    <div class="category-section">
+        <div class="category-header">
+            DM16: NEBULIZERS & COMPRESSORS (BOC Category)
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-name">Nebulizer - Portable</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0570</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">J45.x (Asthma), J44.x (COPD), J20.9 (Bronchitis), J18.9 (Pneumonia)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Asthma; COPD; chronic respiratory disease requiring nebulized medications
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Respiratory diagnosis; medication requiring nebulization; inhaler ineffective or contraindicated; physician prescription
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Nebulizer - Durable</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0575</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">J45.x, J44.x, J84.9 (Interstitial lung disease)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Chronic respiratory condition; frequent nebulizer treatments; home therapy
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Chronic respiratory diagnosis; frequency of treatments; medication orders
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Nebulizer - Ultrasonic</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0580</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">J45.x, E84.0 (Cystic fibrosis), J84.9</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Thick secretions; cystic fibrosis; requires ultrasonic delivery
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Document why standard nebulizer insufficient; specific medication requirements; pulmonologist recommendation
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Compressor with Nebulizer</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0572</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">J45.x, J44.x, J20.9</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Asthma; COPD; respiratory disease requiring compressor-driven nebulization
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Respiratory diagnosis; nebulized medication prescription; home use medical necessity
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<!-- DM17: VENTILATORS -->
+    <div class="category-section">
+        <div class="category-header">
+            DM17: VENTILATORS (BOC Category)
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-name">Ventilator - Volume/Pressure (Non-Invasive)</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0465, E0466</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">J96.10 (Respiratory failure), G47.30 (Sleep apnea), G12.21 (ALS), G71.0 (Muscular dystrophy)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Chronic respiratory failure; neuromuscular disease; sleep-related hypoventilation; ALS
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> PFTs; ABG results; sleep study; pulmonologist evaluation; ventilator settings; failed BiPAP/CPAP
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Ventilator - Invasive (Tracheostomy)</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0467</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">J96.10, G82.51 (Quadriplegia C1-C4), Z93.0 (Tracheostomy status)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Ventilator-dependent via tracheostomy; chronic respiratory failure; high spinal cord injury
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Tracheostomy documentation; vent settings; respiratory failure documentation; pulmonology management
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<!-- DM18: SUCTION PUMPS -->
+    <div class="category-section">
+        <div class="category-header">
+            DM18: SUCTION PUMPS (BOC Category)
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-name">Suction Pump - Portable</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0600</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">Z93.0 (Tracheostomy), J95.02 (Trach complications), R09.89 (Excessive secretions)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Tracheostomy with secretions; inability to clear airway; excessive oral/respiratory secretions
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Tracheostomy or airway clearance need; secretion management; physician order; frequency of suctioning
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Suction Pump - Stationary</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0601</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">Z93.0, R09.89, J95.02</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Home suction for tracheostomy; bedside suctioning needs; immobile patient
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Suctioning medical necessity; stationary use justification; home setup
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="footer">
+        <div style="font-size: 11pt; font-weight: bold; margin-bottom: 10px; text-align: center;">
+            ⚡ STREAMLINED ORDERING PROCESS FOR PHYSICIANS
+        </div>
+        <div style="font-size: 9pt; line-height: 1.8; margin-bottom: 10px;">
+            <strong>1️⃣ WRITE PRESCRIPTION:</strong> Product name or HCPCS code + ICD-10 diagnosis + Duration + Signature<br>
+            <strong>2️⃣ FAX TO US:</strong> +1 516-268-96-79 or Email: holistic766@gmail.com<br>
+            <strong>3️⃣ WE HANDLE:</strong> Medicare & Medicaid authorizations, medical necessity documentation<br>
+            <strong>4️⃣ WE COORDINATE:</strong> Patient contact, device training/fitting, delivery, follow-up care
+        </div>
+        <div style="font-size: 8pt; color: #555; margin-top: 10px; line-height: 1.6;">
+            <strong>ACCREDITATION:</strong> BOC Facility #S72641 (Valid through 5/31/2028) • NPI: 1780490581<br>
+            <strong>COMPLIANCE:</strong> 36 DMEPOS Categories Approved • Medicare & Medicaid Enrolled<br>
+            <strong>CODES:</strong> All HCPCS codes current 2025-2026 • All ICD-10 codes FY 2026 compliant<br>
+            <strong>INSURANCE:</strong> Medicare & Medicaid Only • We do not process private insurance claims<br>
+            <strong>SERVICE AREA:</strong> NYC • Brooklyn • Staten Island • Port Washington • Nassau County<br>
+            <strong>CONTACT:</strong> 1170 Port Washington Blvd, Port Washington, NY 11050 • Phone: +1 516-810-26-33<br>
+            <strong>24/7 FAX:</strong> +1 516-268-96-79 • <strong>EMAIL:</strong> holistic766@gmail.com
+        </div>
+        <div style="margin-top: 15px; padding-top: 10px; border-top: 2px solid #2a6fb8; font-size: 8pt; text-align: center; color: #1e5a96; font-weight: bold;">
+            HOLISTIC MEDICAL SUPPLY • SERVING PHYSICIANS & PATIENTS ACROSS NEW YORK • MEDICARE & MEDICAID CERTIFIED
+        </div>
+    </div>
+</body>
+</html>

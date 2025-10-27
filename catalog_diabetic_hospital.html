@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetic & Hospital Equipment - Holistic Medical Supply</title>
+    <style>
+        @page { size: letter; margin: 0.35in; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 8.5pt;
+            line-height: 1.2;
+            background: white;
+            color: #333;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #1e5a96 0%, #2a6fb8 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .company-name { font-size: 28px; font-weight: bold; margin-bottom: 5px; }
+        .tagline { font-size: 11px; font-style: italic; }
+
+        /* NAVIGATION */
+        .nav-bar {
+            background: #f0f8ff;
+            border: 2px solid #2a6fb8;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 8pt;
+        }
+        .nav-bar a {
+            color: #1e5a96;
+            text-decoration: none;
+            padding: 5px 10px;
+            margin: 0 5px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .nav-bar a:hover {
+            background: #2a6fb8;
+            color: white;
+        }
+        .nav-bar a.active {
+            background: #1e5a96;
+            color: white;
+        }
+
+        /* BOC CREDENTIALS */
+        .boc-bar {
+            background: #e8f4f8;
+            border: 2px solid #1e5a96;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            text-align: center;
+        }
+        .boc-item {
+            background: white;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #2a6fb8;
+        }
+        .boc-label { font-size: 7pt; font-weight: bold; color: #1e5a96; text-transform: uppercase; }
+        .boc-value { font-size: 11px; font-weight: bold; color: #1e5a96; margin-top: 3px; }
+
+        /* CATEGORY SECTIONS */
+        .category-section {
+            margin-bottom: 15px;
+            page-break-inside: avoid;
+        }
+        .category-header {
+            background: linear-gradient(135deg, #1e5a96 0%, #2a6fb8 100%);
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        /* PRODUCT GRID */
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        .product-card {
+            background: white;
+            border: 1.5px solid #ddd;
+            border-radius: 6px;
+            padding: 8px;
+            page-break-inside: avoid;
+        }
+        .product-name {
+            font-weight: bold;
+            font-size: 9pt;
+            margin-bottom: 5px;
+            color: #2c3e50;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 3px;
+        }
+        .code-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 5px;
+            margin-bottom: 4px;
+            font-size: 7.5pt;
+        }
+        .code-label {
+            font-weight: bold;
+            color: #555;
+        }
+        .code-value {
+            color: #1e5a96;
+            font-weight: 600;
+        }
+        .clinical-box {
+            background: #f0f8ff;
+            padding: 5px;
+            border-radius: 4px;
+            font-size: 7.5pt;
+            margin: 5px 0;
+            border-left: 2px solid #1e5a96;
+        }
+        .med-necessity {
+            background: #e8f4f8;
+            padding: 5px;
+            border-radius: 4px;
+            font-size: 7.5pt;
+            margin: 5px 0;
+            border-left: 2px solid #ffc107;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #f8f9fa;
+            border: 2px solid #2a6fb8;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 8pt;
+            line-height: 1.6;
+            page-break-inside: avoid;
+        }
+        .footer strong { color: #1e5a96; }
+
+        /* PRINT OPTIMIZATION */
+        @media print {
+            body { background: white; }
+            .nav-bar { display: none; }
+            .page-break { page-break-before: always; }
+        }
+
+        @media screen {
+            body { padding: 10px; background: #f5f5f5; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>
+            <div class="company-name">Holistic Medical Supply</div>
+            <div class="tagline">Diabetic Equipment, Hospital Beds, Commodes, IPPB, Lymphedema</div>
+        </div>
+    </div>
+
+    <div class="nav-bar">
+        <a href="index.html">🏠 Home</a>
+        <a href="catalog_diabetic_hospital.html" class="active">🏥 Diabetic/Hospital</a>
+        <a href="catalog_patient_care.html" >👨‍⚕️ Patient Care</a>
+        <a href="catalog_therapeutic.html" >⚕️ Therapeutic</a>
+        <a href="catalog_mobility.html" >♿ Mobility</a>
+        <a href="catalog_orthotic_prosthetic.html" >🦾 Orthotic/Prosthetic</a>
+        <a href="catalog_specialized.html" >🔬 Specialized</a>
+    </div>
+
+    <div class="boc-bar">
+        <div class="boc-item">
+            <div class="boc-label">BOC Accreditation</div>
+            <div class="boc-value">Facility #S72641</div>
+        </div>
+        <div class="boc-item">
+            <div class="boc-label">Valid Through</div>
+            <div class="boc-value">May 31, 2028</div>
+        </div>
+        <div class="boc-item">
+            <div class="boc-label">NPI Number</div>
+            <div class="boc-value">1780490581</div>
+        </div>
+        <div class="boc-item">
+            <div class="boc-label">Categories</div>
+            <div class="boc-value">36 BOC Categories</div>
+        </div>
+    </div>
+
+    <!-- DM02: DIABETIC EQUIPMENT & SUPPLIES -->
+    <div class="category-section">
+        <div class="category-header">
+            DM02: DIABETIC EQUIPMENT & SUPPLIES (BOC Category)
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-name">Blood Glucose Monitor</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0607</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">E11.9 (Type 2 diabetes), E10.9 (Type 1 diabetes), E11.65 (Hyperglycemia)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Diabetes mellitus requiring glucose monitoring; insulin-dependent or non-insulin dependent diabetes
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Diabetes diagnosis; physician order; frequency of testing; training documentation
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Continuous Glucose Monitor (CGM)</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E2103</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">E10.65, E11.65, E13.65 (Diabetes with hyperglycemia)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Type 1 or insulin-treated Type 2 diabetes; frequent hypoglycemia; hypoglycemia unawareness
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> CGM criteria met; insulin use 3+ times daily; 4+ glucose checks daily; therapeutic CGM use
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Insulin Infusion Pump</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0784</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">E10.9, E11.9, E10.10, E10.65</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Type 1 diabetes; insulin-dependent Type 2 diabetes; gastroparesis; dawn phenomenon
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Insulin pump training; failed MDI therapy; C-peptide levels if Type 2; endocrinologist management
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Insulin Infusion Pump - External</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0784</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">E10.9 (Type 1 DM), E11.9 (Type 2 DM)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Insulin-dependent diabetes requiring continuous subcutaneous insulin infusion
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Pump training completed; failed MDI; endocrinology consult
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<!-- DM05: SAFETY EQUIPMENT - PELVIC & EXTREMITY TRACTION -->
+    <div class="category-section">
+        <div class="category-header">
+            DM05: SAFETY EQUIPMENT - PELVIC & EXTREMITY TRACTION (BOC Category)
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-name">Pelvic Traction Equipment</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0890, E0900</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">M54.5 (Low back pain), M51.36 (Lumbar disc disorder), M43.16 (Spondylolisthesis)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Lumbar radiculopathy; disc herniation; muscle spasm; degenerative disc disease
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Failed conservative therapy; PT prescription; home use justification; trial period results
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Cervical Traction Equipment</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0855, E0856</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">M50.12 (Cervical disc disorder with radiculopathy), M47.22 (Cervical spondylosis with radiculopathy)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Cervical radiculopathy; disc herniation; nerve root compression; muscle spasm
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Imaging confirmation; PT prescription; failed other conservative treatments; home safety assessment
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Extremity Traction Equipment</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0870, E0880</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">S72.0 (Femoral neck fracture), S82.0 (Patella fracture), M25.50 (Joint pain)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Fracture management; joint contracture prevention; post-surgical immobilization
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Physician order with specific traction parameters; duration; weight specifications
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<!-- DM06: HOSPITAL BEDS & ACCESSORIES -->
+    <div class="category-section">
+        <div class="category-header">
+            DM06: HOSPITAL BEDS & ACCESSORIES (BOC Category)
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-name">Semi-Electric Hospital Bed</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0260, E0261</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">M62.81 (Muscle weakness), I50.9 (CHF), J44.1 (COPD), R26.2 (Difficulty walking)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Severe mobility limitation; cannot safely transfer from standard bed; medical positioning needs
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Mobility limitation documentation; unsafe with standard bed; positioning requirements; physician face-to-face
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Full-Electric Hospital Bed</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0265, E0266</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">G82.20 (Paraplegia), M62.81, I50.9, J96.10 (Respiratory failure)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Complete mobility impairment; requires frequent position changes; caregiver limitations
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Document why semi-electric insufficient; complete immobility; caregiver physical limitations; positioning frequency
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Hospital Bed - Heavy Duty</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0302, E0303, E0304</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">E66.01 (Morbid obesity), M62.81, I50.9</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Patient weight >350 lbs; standard bed inadequate; bariatric patient with mobility limitation
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Patient weight documentation; medical necessity for bed; standard bed insufficient
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Hospital Bed Mattress - Innerspring</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0271</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">L89.x (Pressure ulcer), M62.81</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Hospital bed use; pressure redistribution; comfort for immobile patient
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Hospital bed documentation; mattress medical necessity
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Hospital Bed Mattress - Foam Rubber</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0272</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">L89.x, M62.81, G82.20</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Pressure ulcer prevention; immobility; hospital bed use
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Hospital bed; pressure ulcer risk factors; Braden scale if available
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Bed Rails - Full Length</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0305</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">R26.81 (Unsteadiness), R41.0 (Disorientation), F03.90 (Dementia), R29.6 (Falls)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Fall risk; confusion; needs repositioning assistance; safety during sleep
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Fall risk assessment; hospital bed documentation; safety necessity; least restrictive option
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Bed Rails - Half Length</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0310</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">R26.81, M62.81, R29.6</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Moderate fall risk; needs positioning aid; transfer assistance
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Fall risk; bed rail necessity; why full rails not needed
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Trapeze Bar (Bed Attachment)</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0910, E0911, E0912</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">M62.81, G82.20, Z96.641 (Hip replacement status)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Needs upper extremity assist for repositioning; post-surgical mobility; strengthening
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Repositioning needs; upper extremity function adequate; PT recommendation
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<!-- DM08: COMMODE CHAIRS -->
+    <div class="category-section">
+        <div class="category-header">
+            DM08: COMMODE CHAIRS (BOC Category)
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-name">Bedside Commode - Standard</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0163 (Fixed arms), E0165 (Detachable arms)</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">R26.2 (Walking difficulty), M62.81 (Muscle weakness), I50.9 (CHF)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Cannot safely ambulate to bathroom; bedbound or near-bedbound; severe mobility limitation
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Ambulation limitation; distance to bathroom; fall risk; nighttime safety; physician order
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Bedside Commode - Drop-Arm</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0168</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">R26.2, M62.81, G81.x (Hemiplegia)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Requires lateral transfer; one-sided weakness; cannot step over standard commode arms
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Document why standard insufficient; transfer method; one-sided weakness; PT assessment
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Bedside Commode - Bariatric</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0171, E0172</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">E66.01 (Morbid obesity), R26.2, M62.81</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Patient weight >350 lbs (E0171) or >450 lbs (E0172); standard commode inadequate
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Patient weight; mobility limitation; standard commode insufficient
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<!-- DM11: IPPB (INTERMITTENT POSITIVE PRESSURE BREATHING) MACHINES -->
+    <div class="category-section">
+        <div class="category-header">
+            DM11: IPPB (INTERMITTENT POSITIVE PRESSURE BREATHING) MACHINES (BOC Category)
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-name">IPPB Machine</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0500</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">J44.1 (COPD with exacerbation), J98.4 (Other lung disorders), J96.10 (Respiratory failure)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Severe respiratory disease; inability to deep breathe; atelectasis prevention; ineffective cough
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Pulmonary function tests; failed incentive spirometry; physician documentation of medical necessity; respiratory therapy evaluation
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">IPPB Replacement Parts</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0560, E0561, E0562, E0565</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">J44.1, J96.10, J98.4</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Ongoing IPPB therapy; equipment maintenance
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Current IPPB use documentation; replacement part medical necessity
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="footer">
+        <div style="font-size: 11pt; font-weight: bold; margin-bottom: 10px; text-align: center;">
+            ⚡ STREAMLINED ORDERING PROCESS FOR PHYSICIANS
+        </div>
+        <div style="font-size: 9pt; line-height: 1.8; margin-bottom: 10px;">
+            <strong>1️⃣ WRITE PRESCRIPTION:</strong> Product name or HCPCS code + ICD-10 diagnosis + Duration + Signature<br>
+            <strong>2️⃣ FAX TO US:</strong> +1 516-268-96-79 or Email: holistic766@gmail.com<br>
+            <strong>3️⃣ WE HANDLE:</strong> Medicare & Medicaid authorizations, medical necessity documentation<br>
+            <strong>4️⃣ WE COORDINATE:</strong> Patient contact, device training/fitting, delivery, follow-up care
+        </div>
+        <div style="font-size: 8pt; color: #555; margin-top: 10px; line-height: 1.6;">
+            <strong>ACCREDITATION:</strong> BOC Facility #S72641 (Valid through 5/31/2028) • NPI: 1780490581<br>
+            <strong>COMPLIANCE:</strong> 36 DMEPOS Categories Approved • Medicare & Medicaid Enrolled<br>
+            <strong>CODES:</strong> All HCPCS codes current 2025-2026 • All ICD-10 codes FY 2026 compliant<br>
+            <strong>INSURANCE:</strong> Medicare & Medicaid Only • We do not process private insurance claims<br>
+            <strong>SERVICE AREA:</strong> NYC • Brooklyn • Staten Island • Port Washington • Nassau County<br>
+            <strong>CONTACT:</strong> 1170 Port Washington Blvd, Port Washington, NY 11050 • Phone: +1 516-810-26-33<br>
+            <strong>24/7 FAX:</strong> +1 516-268-96-79 • <strong>EMAIL:</strong> holistic766@gmail.com
+        </div>
+        <div style="margin-top: 15px; padding-top: 10px; border-top: 2px solid #2a6fb8; font-size: 8pt; text-align: center; color: #1e5a96; font-weight: bold;">
+            HOLISTIC MEDICAL SUPPLY • SERVING PHYSICIANS & PATIENTS ACROSS NEW YORK • MEDICARE & MEDICAID CERTIFIED
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobility Equipment - Holistic Medical Supply</title>
+    <style>
+        @page { size: letter; margin: 0.35in; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 8.5pt;
+            line-height: 1.2;
+            background: white;
+            color: #333;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #1e5a96 0%, #2a6fb8 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .company-name { font-size: 28px; font-weight: bold; margin-bottom: 5px; }
+        .tagline { font-size: 11px; font-style: italic; }
+
+        /* NAVIGATION */
+        .nav-bar {
+            background: #f0f8ff;
+            border: 2px solid #2a6fb8;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 8pt;
+        }
+        .nav-bar a {
+            color: #1e5a96;
+            text-decoration: none;
+            padding: 5px 10px;
+            margin: 0 5px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .nav-bar a:hover {
+            background: #2a6fb8;
+            color: white;
+        }
+        .nav-bar a.active {
+            background: #1e5a96;
+            color: white;
+        }
+
+        /* BOC CREDENTIALS */
+        .boc-bar {
+            background: #e8f4f8;
+            border: 2px solid #1e5a96;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            text-align: center;
+        }
+        .boc-item {
+            background: white;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #2a6fb8;
+        }
+        .boc-label { font-size: 7pt; font-weight: bold; color: #1e5a96; text-transform: uppercase; }
+        .boc-value { font-size: 11px; font-weight: bold; color: #1e5a96; margin-top: 3px; }
+
+        /* CATEGORY SECTIONS */
+        .category-section {
+            margin-bottom: 15px;
+            page-break-inside: avoid;
+        }
+        .category-header {
+            background: linear-gradient(135deg, #1e5a96 0%, #2a6fb8 100%);
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        /* PRODUCT GRID */
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        .product-card {
+            background: white;
+            border: 1.5px solid #ddd;
+            border-radius: 6px;
+            padding: 8px;
+            page-break-inside: avoid;
+        }
+        .product-name {
+            font-weight: bold;
+            font-size: 9pt;
+            margin-bottom: 5px;
+            color: #2c3e50;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 3px;
+        }
+        .code-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 5px;
+            margin-bottom: 4px;
+            font-size: 7.5pt;
+        }
+        .code-label {
+            font-weight: bold;
+            color: #555;
+        }
+        .code-value {
+            color: #1e5a96;
+            font-weight: 600;
+        }
+        .clinical-box {
+            background: #f0f8ff;
+            padding: 5px;
+            border-radius: 4px;
+            font-size: 7.5pt;
+            margin: 5px 0;
+            border-left: 2px solid #1e5a96;
+        }
+        .med-necessity {
+            background: #e8f4f8;
+            padding: 5px;
+            border-radius: 4px;
+            font-size: 7.5pt;
+            margin: 5px 0;
+            border-left: 2px solid #ffc107;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #f8f9fa;
+            border: 2px solid #2a6fb8;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 8pt;
+            line-height: 1.6;
+            page-break-inside: avoid;
+        }
+        .footer strong { color: #1e5a96; }
+
+        /* PRINT OPTIMIZATION */
+        @media print {
+            body { background: white; }
+            .nav-bar { display: none; }
+            .page-break { page-break-before: always; }
+        }
+
+        @media screen {
+            body { padding: 10px; background: #f5f5f5; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>
+            <div class="company-name">Holistic Medical Supply</div>
+            <div class="tagline">Canes, Crutches, Walkers, Wheelchairs, Power Scooters</div>
+        </div>
+    </div>
+
+    <div class="nav-bar">
+        <a href="index.html">🏠 Home</a>
+        <a href="catalog_diabetic_hospital.html" >🏥 Diabetic/Hospital</a>
+        <a href="catalog_patient_care.html" >👨‍⚕️ Patient Care</a>
+        <a href="catalog_therapeutic.html" >⚕️ Therapeutic</a>
+        <a href="catalog_mobility.html" class="active">♿ Mobility</a>
+        <a href="catalog_orthotic_prosthetic.html" >🦾 Orthotic/Prosthetic</a>
+        <a href="catalog_specialized.html" >🔬 Specialized</a>
+    </div>
+
+    <div class="boc-bar">
+        <div class="boc-item">
+            <div class="boc-label">BOC Accreditation</div>
+            <div class="boc-value">Facility #S72641</div>
+        </div>
+        <div class="boc-item">
+            <div class="boc-label">Valid Through</div>
+            <div class="boc-value">May 31, 2028</div>
+        </div>
+        <div class="boc-item">
+            <div class="boc-label">NPI Number</div>
+            <div class="boc-value">1780490581</div>
+        </div>
+        <div class="boc-item">
+            <div class="boc-label">Categories</div>
+            <div class="boc-value">36 BOC Categories</div>
+        </div>
+    </div>
+
+    <!-- M01: CANES -->
+    <div class="category-section">
+        <div class="category-header">
+            M01: CANES (BOC Category)
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-name">Cane - Single Point</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0100</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">R26.81 (Unsteadiness), M25.50 (Joint pain), R26.2 (Difficulty walking)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Mild balance impairment; unilateral weakness; gait instability; joint pain affecting ambulation
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Gait instability; balance impairment; physician/PT order; single point adequate for needs
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Cane - Quad/3-Point</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0105</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">R26.81, G81.x (Hemiplegia), I69.x (Stroke sequelae)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Moderate balance impairment; hemiplegia; stroke; needs more stability than single point
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Document why single-point insufficient; balance impairment severity; PT evaluation
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Walk-Easy Cane</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0110</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">R26.81, M25.50, G20 (Parkinson's)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Severe balance impairment; Parkinson's disease; needs maximum cane stability
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Document why quad cane insufficient; specific disease process; PT recommendation
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<!-- M05: CRUTCHES -->
+    <div class="category-section">
+        <div class="category-header">
+            M05: CRUTCHES (BOC Category)
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-name">Crutches - Forearm (Pair)</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0110, E0111</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">S82.0 (Fracture lower leg), S92.0 (Fracture foot), M25.561 (Knee pain)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Non-weight bearing or partial weight bearing on lower extremity; post-surgical; fracture
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Weight-bearing restriction; physician order specifying restrictions; duration; PT training
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Crutches - Underarm (Pair)</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0112, E0113, E0114</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">S82.0, S92.0, M25.561, Z96.641 (Post joint replacement)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Temporary non-weight bearing or partial weight bearing; post-surgical; injury
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Weight-bearing orders; expected duration; crutch gait training; physician order
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<!-- M06A: POWER SCOOTERS -->
+    <div class="category-section">
+        <div class="category-header">
+            M06A: POWER SCOOTERS (BOC Category)
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-name">Power Scooter - Class 2 (3-Wheel)</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">K0800, K0801, K0802</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">M62.81, G82.20, M17.0 (Knee OA), I73.9 (PVD), J44.1 (COPD)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Cannot safely use manual wheelchair; can transfer independently; adequate upper extremity function; limited ambulation
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Mobility limitation in home; cannot use manual WC; safe transfer ability; adequate vision/cognition; face-to-face exam; home assessment
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Power Scooter - Class 2 (4-Wheel)</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">K0806, K0807, K0808</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">M62.81, G82.20, M17.0, I73.9</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Same as 3-wheel but needs additional stability; outdoor use; uneven terrain
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Scooter medical necessity; document why 3-wheel insufficient; stability needs; usage environment
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Power Scooter - Heavy Duty</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">K0809, K0810, K0811, K0812, K0813, K0814</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">E66.01 (Morbid obesity), M62.81, G82.20</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Standard scooter weight capacity insufficient; patient >300 lbs
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Patient weight; standard scooter insufficient; mobility limitation; medical necessity
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<!-- M07: MANUAL WHEELCHAIR ACCESSORIES -->
+    <div class="category-section">
+        <div class="category-header">
+            M07: MANUAL WHEELCHAIR ACCESSORIES (BOC Category)
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-name">Manual Wheelchair Anti-Tipping Device</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0971, E0972</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">R26.81 (Unsteadiness), R29.6 (Falls), G82.20</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Fall risk; wheelchair tipping risk; impaired balance/judgment
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Fall risk; tipping risk assessment; medical necessity; PT evaluation
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Manual Wheelchair Headrest</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0955, E0956</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">G82.20, G80.9 (Cerebral palsy), M62.81</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Inadequate head/neck control; positioning needs; trunk/neck weakness
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Head control deficit; positioning medical necessity; PT/OT evaluation
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Manual Wheelchair Arm Trough</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0951, E0952, E0953</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">G81.x (Hemiplegia), I69.x (Stroke), M62.81</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Arm support needed; hemiplegia; stroke; upper extremity weakness/subluxation
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Upper extremity weakness; subluxation risk; positioning need; OT evaluation
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Wheelchair Cushion - General</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E2601, E2602, E2603, E2604, E2605</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">L89.x (Pressure ulcer risk), G82.20, M62.81</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Pressure redistribution; immobility; prolonged wheelchair sitting
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Sitting time >6 hours/day; pressure ulcer risk factors; Braden scale; PT/OT evaluation
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<!-- M07A: POWER WHEELCHAIR ACCESSORIES -->
+    <div class="category-section">
+        <div class="category-header">
+            M07A: POWER WHEELCHAIR ACCESSORIES (BOC Category)
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-name">Power Wheelchair Tilt-in-Space Seating</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E1002, E1003</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">L89.x (Pressure ulcer), G82.20, G80.9</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> High pressure ulcer risk; inability to reposition; orthostatic hypotension; severe postural issues
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Pressure ulcer history/risk; cannot independently reposition; medical necessity for tilt; PT/seating evaluation
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Power Wheelchair - Recline Feature</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E1004, E1005, E1006, E1007, E1008, E1009, E1010</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">G82.20, L89.x, I95.1 (Orthostatic hypotension)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Orthostatic hypotension; pressure relief; positioning needs; trunk/hip contractures
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Medical necessity for recline; conditions requiring position changes; PT evaluation
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Power Wheelchair Elevating Leg Rests</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E1010, K0046, K0047</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">I87.2 (Venous insufficiency), I83.0 (Varicose veins), I80.x (Phlebitis/thrombophlebitis)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Lower extremity edema; venous insufficiency; elevation requirement; knee/hip contractures
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Edema documentation; vascular studies; elevation medical necessity; PT evaluation
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Power Wheelchair Headrest</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E2201, E2202, E2203</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">G82.20, G80.9, M62.81</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Inadequate head control; cervical weakness; positioning needs
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Head control deficits; cervical weakness documentation; positioning medical necessity; PT/OT evaluation
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Power Wheelchair Lateral Trunk Supports</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E2218, E2220, E2221</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">G82.20, G80.9, M41.9 (Scoliosis)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Trunk control deficit; scoliosis; inadequate lateral stability
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Trunk control assessment; postural deficit; medical necessity; seating evaluation
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<!-- M10: POWER WHEELCHAIRS -->
+    <div class="category-section">
+        <div class="category-header">
+            M10: POWER WHEELCHAIRS (BOC Category)
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-name">Power Wheelchair - Group 1 Standard</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">K0813, K0814, K0815, K0816, K0821, K0822</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">M62.81, G82.20, G20 (Parkinson's), M15.9 (OA)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Mobility limitation in home; cannot self-propel manual WC; inadequate upper extremity strength/endurance
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Cannot meet needs with manual WC; mobility limitation documented; face-to-face exam; home assessment; failed manual WC trial
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Power Wheelchair - Group 2 Standard</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">K0820, K0823, K0824, K0825, K0826, K0827, K0828, K0829</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">G82.20, G80.9, G12.21 (ALS), M62.81</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Needs power seating system or increased performance; standard Group 1 insufficient
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Document why Group 1 insufficient; specific feature needs; complex seating needs; PT evaluation
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Power Wheelchair - Group 3 Heavy Duty</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">K0848, K0849, K0850, K0851, K0852, K0853, K0854, K0855, K0856, K0857, K0858, K0859, K0860, K0861, K0862, K0863, K0864</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">E66.01, G82.20, M62.81</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Patient weight >250-300 lbs; standard chair weight capacity insufficient; bariatric needs
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Patient weight; standard chair insufficient; mobility medical necessity; seating width/depth requirements
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Power Wheelchair - Group 4 Multiple Power Options</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">K0868, K0869, K0870, K0871</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">G82.20, G80.9, G12.21</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Requires multiple power options (tilt, recline, seat elevation, standing); complex positioning
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Medical necessity for multiple power features; document each feature need; seating evaluation
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Power Wheelchair - Group 5 Pediatric</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">K0890, K0891</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">G80.9, G71.0, Q05.x (Spina bifida)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Pediatric patient with severe mobility limitation; growth accommodation needed
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Age-appropriate medical necessity; growth features; complex pediatric needs
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<!-- S01: CANES -->
+    <div class="category-section">
+        <div class="category-header">
+            S01: CANES (BOC Category)
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-name">Cane - Adjustable/Standard</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0100</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">R26.81 (Unsteadiness), M25.50 (Joint pain), R26.2 (Difficulty walking), G20 (Parkinson's)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Gait instability; mild balance impairment; unilateral weakness; joint pain affecting ambulation
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Balance/gait impairment; physician/PT order; medical necessity for ambulation safety
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Cane - Quad/Multi-Prong</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0105</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">R26.81, G81.x (Hemiplegia), I69.x (Stroke sequelae), G20</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Moderate-severe balance impairment; hemiplegia; stroke; single-point cane insufficient
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Document why single-point insufficient; balance severity; stroke/hemiplegia documentation; PT evaluation
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Cane - White (for Blind)</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0105</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">H54.x (Blindness/low vision)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Legally blind; visual impairment requiring navigation aid
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Visual impairment documentation; ophthalmology records; legal blindness certification
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<!-- S04: WALKERS -->
+    <div class="category-section">
+        <div class="category-header">
+            S04: WALKERS (BOC Category)
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-name">Walker - Rigid (No Wheels)</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0130, E0135</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">R26.2, M62.81, R26.81, M25.50</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Significant gait/balance impairment; needs maximum stability; partial weight-bearing
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Balance/gait deficit; medical necessity for walker; PT evaluation; can lift walker
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Walker - Folding (No Wheels)</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0141, E0143</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">R26.2, M62.81, R26.81</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Same as rigid walker; needs portability/transport capability
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Walker medical necessity; portability need; can manage folding mechanism
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Walker - 2-Wheeled (Front Wheels)</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0143, E0144</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">R26.2, R26.81, G20 (Parkinson's), M62.81</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Gait impairment; difficulty lifting walker; needs continuous forward motion
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Document why rigid walker insufficient; cannot safely lift walker; gait pattern requires wheels
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Walker - 4-Wheeled (Rollator)</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0147, E0148, E0149</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">R26.81, M62.81, I50.9 (CHF), J44.1 (COPD)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Balance impairment with fatigue; endurance limitation; needs seat for rest; COPD/CHF
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Balance impairment plus endurance limitation; medical necessity for seat; safe brake use; PT evaluation
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Walker - Enclosed/4-Sided Frame</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0144</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">R26.81, G81.x, I69.x, G20</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Severe balance impairment; significant postural instability; needs maximum stability
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Document why standard walker insufficient; severe instability; fall risk; PT assessment
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Walker - Heavy Duty (>300 lbs)</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0148, E0149</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">E66.01, R26.2, M62.81</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Patient weight >300 lbs; standard walker weight capacity insufficient
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Patient weight; standard walker insufficient; mobility/balance impairment
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Walker Attachments (Platform, Leg Extensions, Wheels, Seats)</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0153, E0154, E0155, E0156, E0157, E0158, E0159</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">R26.2, M62.81, M25.50</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Specific attachment enhances walker function; upper extremity limitations; height needs
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Walker use documentation; specific attachment medical necessity; PT recommendation
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div style="font-size: 11pt; font-weight: bold; margin-bottom: 10px; text-align: center;">
+            ⚡ STREAMLINED ORDERING PROCESS FOR PHYSICIANS
+        </div>
+        <div style="font-size: 9pt; line-height: 1.8; margin-bottom: 10px;">
+            <strong>1️⃣ WRITE PRESCRIPTION:</strong> Product name or HCPCS code + ICD-10 diagnosis + Duration + Signature<br>
+            <strong>2️⃣ FAX TO US:</strong> +1 516-268-96-79 or Email: holistic766@gmail.com<br>
+            <strong>3️⃣ WE HANDLE:</strong> Medicare & Medicaid authorizations, medical necessity documentation<br>
+            <strong>4️⃣ WE COORDINATE:</strong> Patient contact, device training/fitting, delivery, follow-up care
+        </div>
+        <div style="font-size: 8pt; color: #555; margin-top: 10px; line-height: 1.6;">
+            <strong>ACCREDITATION:</strong> BOC Facility #S72641 (Valid through 5/31/2028) • NPI: 1780490581<br>
+            <strong>COMPLIANCE:</strong> 36 DMEPOS Categories Approved • Medicare & Medicaid Enrolled<br>
+            <strong>CODES:</strong> All HCPCS codes current 2025-2026 • All ICD-10 codes FY 2026 compliant<br>
+            <strong>INSURANCE:</strong> Medicare & Medicaid Only • We do not process private insurance claims<br>
+            <strong>SERVICE AREA:</strong> NYC • Brooklyn • Staten Island • Port Washington • Nassau County<br>
+            <strong>CONTACT:</strong> 1170 Port Washington Blvd, Port Washington, NY 11050 • Phone: +1 516-810-26-33<br>
+            <strong>24/7 FAX:</strong> +1 516-268-96-79 • <strong>EMAIL:</strong> holistic766@gmail.com
+        </div>
+        <div style="margin-top: 15px; padding-top: 10px; border-top: 2px solid #2a6fb8; font-size: 8pt; text-align: center; color: #1e5a96; font-weight: bold;">
+            HOLISTIC MEDICAL SUPPLY • SERVING PHYSICIANS & PATIENTS ACROSS NEW YORK • MEDICARE & MEDICAID CERTIFIED
+        </div>
+    </div>
+</body>
+</html>

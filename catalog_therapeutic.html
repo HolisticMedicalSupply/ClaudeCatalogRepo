@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Equipment - Holistic Medical Supply</title>
+    <style>
+        @page { size: letter; margin: 0.35in; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 8.5pt;
+            line-height: 1.2;
+            background: white;
+            color: #333;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #1e5a96 0%, #2a6fb8 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .company-name { font-size: 28px; font-weight: bold; margin-bottom: 5px; }
+        .tagline { font-size: 11px; font-style: italic; }
+
+        /* NAVIGATION */
+        .nav-bar {
+            background: #f0f8ff;
+            border: 2px solid #2a6fb8;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 8pt;
+        }
+        .nav-bar a {
+            color: #1e5a96;
+            text-decoration: none;
+            padding: 5px 10px;
+            margin: 0 5px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .nav-bar a:hover {
+            background: #2a6fb8;
+            color: white;
+        }
+        .nav-bar a.active {
+            background: #1e5a96;
+            color: white;
+        }
+
+        /* BOC CREDENTIALS */
+        .boc-bar {
+            background: #e8f4f8;
+            border: 2px solid #1e5a96;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            text-align: center;
+        }
+        .boc-item {
+            background: white;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #2a6fb8;
+        }
+        .boc-label { font-size: 7pt; font-weight: bold; color: #1e5a96; text-transform: uppercase; }
+        .boc-value { font-size: 11px; font-weight: bold; color: #1e5a96; margin-top: 3px; }
+
+        /* CATEGORY SECTIONS */
+        .category-section {
+            margin-bottom: 15px;
+            page-break-inside: avoid;
+        }
+        .category-header {
+            background: linear-gradient(135deg, #1e5a96 0%, #2a6fb8 100%);
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        /* PRODUCT GRID */
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        .product-card {
+            background: white;
+            border: 1.5px solid #ddd;
+            border-radius: 6px;
+            padding: 8px;
+            page-break-inside: avoid;
+        }
+        .product-name {
+            font-weight: bold;
+            font-size: 9pt;
+            margin-bottom: 5px;
+            color: #2c3e50;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 3px;
+        }
+        .code-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 5px;
+            margin-bottom: 4px;
+            font-size: 7.5pt;
+        }
+        .code-label {
+            font-weight: bold;
+            color: #555;
+        }
+        .code-value {
+            color: #1e5a96;
+            font-weight: 600;
+        }
+        .clinical-box {
+            background: #f0f8ff;
+            padding: 5px;
+            border-radius: 4px;
+            font-size: 7.5pt;
+            margin: 5px 0;
+            border-left: 2px solid #1e5a96;
+        }
+        .med-necessity {
+            background: #e8f4f8;
+            padding: 5px;
+            border-radius: 4px;
+            font-size: 7.5pt;
+            margin: 5px 0;
+            border-left: 2px solid #ffc107;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #f8f9fa;
+            border: 2px solid #2a6fb8;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 8pt;
+            line-height: 1.6;
+            page-break-inside: avoid;
+        }
+        .footer strong { color: #1e5a96; }
+
+        /* PRINT OPTIMIZATION */
+        @media print {
+            body { background: white; }
+            .nav-bar { display: none; }
+            .page-break { page-break-before: always; }
+        }
+
+        @media screen {
+            body { padding: 10px; background: #f5f5f5; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>
+            <div class="company-name">Holistic Medical Supply</div>
+            <div class="tagline">TENS, Traction, Lymphedema, Infusion Supplies, CPAP/BiPAP, Dialysis</div>
+        </div>
+    </div>
+
+    <div class="nav-bar">
+        <a href="index.html">🏠 Home</a>
+        <a href="catalog_diabetic_hospital.html" >🏥 Diabetic/Hospital</a>
+        <a href="catalog_patient_care.html" >👨‍⚕️ Patient Care</a>
+        <a href="catalog_therapeutic.html" class="active">⚕️ Therapeutic</a>
+        <a href="catalog_mobility.html" >♿ Mobility</a>
+        <a href="catalog_orthotic_prosthetic.html" >🦾 Orthotic/Prosthetic</a>
+        <a href="catalog_specialized.html" >🔬 Specialized</a>
+    </div>
+
+    <div class="boc-bar">
+        <div class="boc-item">
+            <div class="boc-label">BOC Accreditation</div>
+            <div class="boc-value">Facility #S72641</div>
+        </div>
+        <div class="boc-item">
+            <div class="boc-label">Valid Through</div>
+            <div class="boc-value">May 31, 2028</div>
+        </div>
+        <div class="boc-item">
+            <div class="boc-label">NPI Number</div>
+            <div class="boc-value">1780490581</div>
+        </div>
+        <div class="boc-item">
+            <div class="boc-label">Categories</div>
+            <div class="boc-value">36 BOC Categories</div>
+        </div>
+    </div>
+
+    <!-- DM22: LYMPHEDEMA PUMPS - SEGMENTAL & NON-SEGMENTAL -->
+    <div class="category-section">
+        <div class="category-header">
+            DM22: LYMPHEDEMA PUMPS - SEGMENTAL & NON-SEGMENTAL (BOC Category)
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-name">Pneumatic Compressor - Non-Segmental</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0650, E0655</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">I89.0 (Lymphedema), I97.2 (Post-mastectomy lymphedema), I87.2 (Venous insufficiency)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Lymphedema Stage 2-3; failed conservative therapy; post-surgical lymphedema
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Lymphedema diagnosis with staging; 4-6 weeks conservative therapy trial; limb measurements; physician order
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">Pneumatic Compressor - Segmental (4+ chambers)</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0651, E0652, E0656, E0657, E0660, E0665, E0666, E0667, E0668, E0669, E0670, E0671, E0672, E0673, E0674, E0675, E0676</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">I89.0, I97.2, I87.2</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Stage 2-3 lymphedema; failed non-segmental pump; complex lymphedema
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Document why non-segmental insufficient; lymphedema severity; compression garment compliance; segmental pump medical necessity
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<!-- DM28: CPAP/BiPAP & RESPIRATORY ASSIST DEVICES -->
+    <div class="category-section">
+        <div class="category-header">
+            DM28: CPAP/BiPAP & RESPIRATORY ASSIST DEVICES (BOC Category)
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-name">CPAP Device</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0601</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">G47.33 (Obstructive sleep apnea)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Obstructive sleep apnea; AHI ≥15 or AHI ≥5 with symptoms
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Sleep study showing AHI ≥15 OR AHI ≥5 with daytime sleepiness/hypertension/CVD; physician order; mask fitting
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">BiPAP Device (without backup rate)</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0470</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">G47.33, J96.10 (Respiratory failure), J44.1 (COPD)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> OSA failing CPAP; restrictive lung disease; obesity hypoventilation; COPD with hypercapnia
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Failed CPAP trial OR complex sleep apnea OR hypoventilation with CO2 >45; sleep study; ABG if applicable
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">BiPAP Device (with backup rate)</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0471</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">J96.10, G47.30 (Central sleep apnea), G12.21 (ALS)</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Central sleep apnea; Cheyne-Stokes; neuromuscular disease; chronic respiratory failure
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> Sleep study showing central apneas OR respiratory failure with hypoventilation; backup rate medical necessity; ABG results
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">RAD (Respiratory Assist Device)</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0464</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">G12.21, G71.0 (Muscular dystrophy), J96.10</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Neuromuscular disease with respiratory insufficiency; restrictive thoracic disease
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> PFTs showing restriction; ABG with hypercapnia; neurology/pulmonology consult; specific ventilator settings
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-name">CPAP/BiPAP Heated Humidifier</div>
+                <div class="code-row">
+                    <div class="code-label">HCPCS:</div>
+                    <div class="code-value">E0562</div>
+                </div>
+                <div class="code-row">
+                    <div class="code-label">ICD-10:</div>
+                    <div class="code-value">G47.33, J96.10</div>
+                </div>
+                <div class="clinical-box">
+                    <strong>INDICATIONS:</strong> Dryness/discomfort with CPAP/BiPAP; nasal congestion; compliance issues from dryness
+                </div>
+                <div class="med-necessity">
+                    <strong>REQUIRE:</strong> CPAP/BiPAP use; dryness symptoms; compliance enhancement; physician order
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="footer">
+        <div style="font-size: 11pt; font-weight: bold; margin-bottom: 10px; text-align: center;">
+            ⚡ STREAMLINED ORDERING PROCESS FOR PHYSICIANS
+        </div>
+        <div style="font-size: 9pt; line-height: 1.8; margin-bottom: 10px;">
+            <strong>1️⃣ WRITE PRESCRIPTION:</strong> Product name or HCPCS code + ICD-10 diagnosis + Duration + Signature<br>
+            <strong>2️⃣ FAX TO US:</strong> +1 516-268-96-79 or Email: holistic766@gmail.com<br>
+            <strong>3️⃣ WE HANDLE:</strong> Medicare & Medicaid authorizations, medical necessity documentation<br>
+            <strong>4️⃣ WE COORDINATE:</strong> Patient contact, device training/fitting, delivery, follow-up care
+        </div>
+        <div style="font-size: 8pt; color: #555; margin-top: 10px; line-height: 1.6;">
+            <strong>ACCREDITATION:</strong> BOC Facility #S72641 (Valid through 5/31/2028) • NPI: 1780490581<br>
+            <strong>COMPLIANCE:</strong> 36 DMEPOS Categories Approved • Medicare & Medicaid Enrolled<br>
+            <strong>CODES:</strong> All HCPCS codes current 2025-2026 • All ICD-10 codes FY 2026 compliant<br>
+            <strong>INSURANCE:</strong> Medicare & Medicaid Only • We do not process private insurance claims<br>
+            <strong>SERVICE AREA:</strong> NYC • Brooklyn • Staten Island • Port Washington • Nassau County<br>
+            <strong>CONTACT:</strong> 1170 Port Washington Blvd, Port Washington, NY 11050 • Phone: +1 516-810-26-33<br>
+            <strong>24/7 FAX:</strong> +1 516-268-96-79 • <strong>EMAIL:</strong> holistic766@gmail.com
+        </div>
+        <div style="margin-top: 15px; padding-top: 10px; border-top: 2px solid #2a6fb8; font-size: 8pt; text-align: center; color: #1e5a96; font-weight: bold;">
+            HOLISTIC MEDICAL SUPPLY • SERVING PHYSICIANS & PATIENTS ACROSS NEW YORK • MEDICARE & MEDICAID CERTIFIED
+        </div>
+    </div>
+</body>
+</html>
