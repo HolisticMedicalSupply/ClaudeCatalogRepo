@@ -105,6 +105,22 @@
             border-radius: 5px;
             border-left: 3px solid #2a6fb8;
             font-size: 9pt;
+            text-decoration: none;
+            display: block;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+        .toc-item:hover {
+            background: linear-gradient(135deg, #1e5a96 0%, #2a6fb8 100%);
+            border-left: 3px solid #1e5a96;
+            transform: translateX(5px);
+            box-shadow: 0 3px 8px rgba(30, 90, 150, 0.3);
+        }
+        .toc-item:hover .toc-category {
+            color: white;
+        }
+        .toc-item:hover .toc-count {
+            color: #e8f4f8;
         }
         .toc-category { font-weight: bold; color: #1e5a96; }
         .toc-count { font-size: 8pt; color: #666; }
@@ -275,49 +291,49 @@
     <div class="toc">
         <div class="toc-title">📋 PRODUCT CATALOG - TABLE OF CONTENTS</div>
         <div class="toc-grid">
-            <div class="toc-item">
+            <a href="#diabetes" class="toc-item">
                 <div class="toc-category">🩸 Diabetes Management</div>
                 <div class="toc-count">CGM, Monitors, Pumps, Shoes, Testing Supplies</div>
-            </div>
-            <div class="toc-item">
+            </a>
+            <a href="#mobility" class="toc-item">
                 <div class="toc-category">♿ Mobility Equipment</div>
                 <div class="toc-count">Wheelchairs, Power Chairs, Scooters, Hospital Beds</div>
-            </div>
-            <div class="toc-item">
+            </a>
+            <a href="#orthotic" class="toc-item">
                 <div class="toc-category">🦴 Orthotic Devices (Prefabricated)</div>
                 <div class="toc-count">Cervical, Spinal, Upper/Lower Extremity</div>
-            </div>
-            <div class="toc-item">
+            </a>
+            <a href="#prosthetic" class="toc-item">
                 <div class="toc-category">🦿 Prosthetic Devices (Prefabricated)</div>
                 <div class="toc-count">Lower Extremity, Breast, Upper Extremity</div>
-            </div>
-            <div class="toc-item">
+            </a>
+            <a href="#respiratory" class="toc-item">
                 <div class="toc-category">🫁 Respiratory Equipment</div>
                 <div class="toc-count">Oxygen, CPAP/BiPAP, Nebulizers, Ventilators</div>
-            </div>
-            <div class="toc-item">
+            </a>
+            <a href="#support" class="toc-item">
                 <div class="toc-category">🛏️ Support Surfaces</div>
                 <div class="toc-count">Pressure Mattresses, Wheelchair Cushions</div>
-            </div>
-            <div class="toc-item">
+            </a>
+            <a href="#bathroom" class="toc-item">
                 <div class="toc-category">🚿 Bathroom Safety</div>
                 <div class="toc-count">Commodes, Toilet Aids, Bath/Shower Equipment</div>
-            </div>
-            <div class="toc-item">
+            </a>
+            <a href="#wound" class="toc-item">
                 <div class="toc-category">🩹 Wound Care</div>
                 <div class="toc-count">NPWT, Advanced Dressings, Compression</div>
-            </div>
-            <div class="toc-item">
+            </a>
+            <a href="#ambulation" class="toc-item">
                 <div class="toc-category">🚶 Ambulation Devices</div>
                 <div class="toc-count">Canes, Crutches, Walkers, Gait Trainers</div>
-            </div>
+            </a>
         </div>
     </div>
     
     <div class="page-break"></div>
     
     <!-- ========================= DIABETES MANAGEMENT ========================= -->
-    <div class="category-section">
+    <div class="category-section" id="diabetes">
         <div class="category-header diabetes">
             🩸 DIABETES MANAGEMENT - COMPLETE PRODUCT LINE
         </div>
@@ -603,7 +619,7 @@
     <div class="page-break"></div>
     
     <!-- ========================= MOBILITY EQUIPMENT ========================= -->
-    <div class="category-section">
+    <div class="category-section" id="mobility">
         <div class="category-header mobility">
             ♿ MOBILITY EQUIPMENT - WHEELCHAIRS, SCOOTERS & HOSPITAL BEDS
         </div>
@@ -941,7 +957,7 @@
     <div class="page-break"></div>
     
     <!-- ========================= ORTHOTIC DEVICES ========================= -->
-    <div class="category-section">
+    <div class="category-section" id="orthotic">
         <div class="category-header orthotic">
             🦴 ORTHOTIC DEVICES (PREFABRICATED) - HEAD TO TOE SUPPORT
         </div>
@@ -1244,7 +1260,7 @@
     <div class="page-break"></div>
     
     <!-- ========================= PROSTHETIC DEVICES ========================= -->
-    <div class="category-section">
+    <div class="category-section" id="prosthetic">
         <div class="category-header prosthetic">
             🦿 PROSTHETIC DEVICES (PREFABRICATED COMPONENTS)
         </div>
@@ -1456,7 +1472,7 @@
     <div class="page-break"></div>
     
     <!-- ========================= RESPIRATORY EQUIPMENT ========================= -->
-    <div class="category-section">
+    <div class="category-section" id="respiratory">
         <div class="category-header respiratory">
             🫁 RESPIRATORY EQUIPMENT - OXYGEN, CPAP, NEBULIZERS & MORE
         </div>
@@ -1831,7 +1847,7 @@
     <div class="page-break"></div>
     
     <!-- ========================= SUPPORT SURFACES ========================= -->
-    <div class="category-section">
+    <div class="category-section" id="support">
         <div class="category-header support">
             🛏️ SUPPORT SURFACES - PRESSURE RELIEF & POSITIONING
         </div>
@@ -2022,7 +2038,7 @@
     <div class="page-break"></div>
     
     <!-- ========================= BATHROOM SAFETY ========================= -->
-    <div class="category-section">
+    <div class="category-section" id="bathroom">
         <div class="category-header bathroom">
             🚿 BATHROOM SAFETY EQUIPMENT - FALL PREVENTION & INDEPENDENCE
         </div>
@@ -2159,7 +2175,7 @@
     <div class="page-break"></div>
     
     <!-- ========================= WOUND CARE ========================= -->
-    <div class="category-section">
+    <div class="category-section" id="wound">
         <div class="category-header wound">
             🩹 WOUND CARE EQUIPMENT - ADVANCED WOUND MANAGEMENT
         </div>
@@ -2386,7 +2402,7 @@
     <div class="page-break"></div>
     
     <!-- ========================= AMBULATION DEVICES ========================= -->
-    <div class="category-section">
+    <div class="category-section" id="ambulation">
         <div class="category-header ambulation">
             🚶 AMBULATION DEVICES - CANES, CRUTCHES, WALKERS & GAIT TRAINERS
         </div>
